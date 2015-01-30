@@ -30,6 +30,18 @@ class TestCollatz (TestCase) :
         self.assertEqual(i,  1)
         self.assertEqual(j, 10)
 
+    def test_read2 (self) :
+        s    = "1     10\n"
+        i, j = collatz_read(s)
+        self.assertEqual(i,  1)
+        self.assertEqual(j, 10)
+
+    def test_read3 (self) :
+        s    = "1 10 100\n"
+        i, j = collatz_read(s)
+        self.assertEqual(i,  1)
+        self.assertEqual(j, 10)
+
     # ----
     # eval
     # ----
@@ -50,6 +62,22 @@ class TestCollatz (TestCase) :
         v = collatz_eval(900, 1000)
         self.assertEqual(v, 174)
 
+    def test_eval_5 (self) :
+        v = collatz_eval(1, 1)
+        self.assertEqual(v, 1)
+
+    def test_eval_6 (self) :
+        v = collatz_eval(1, 2)
+        self.assertEqual(v, 2)
+
+    def test_eval_7 (self) :
+        v = collatz_eval(10, 1)
+        self.assertEqual(v, 20)
+
+    def test_eval_8 (self) :
+        v = collatz_eval(9, 10)
+        self.assertEqual(v, 20)
+
     # -----
     # print
     # -----
@@ -58,6 +86,16 @@ class TestCollatz (TestCase) :
         w = StringIO()
         collatz_print(w, 1, 10, 20)
         self.assertEqual(w.getvalue(), "1 10 20\n")
+
+    def test_print2 (self) :
+        w = StringIO()
+        collatz_print(w, 10, 1, 2)
+        self.assertEqual(w.getvalue(), "10 1 2\n")
+
+    def test_print3 (self) :
+        w = StringIO()
+        collatz_print(w, 23, 43, 20)
+        self.assertEqual(w.getvalue(), "23 43 20\n")
 
     # -----
     # solve
@@ -68,6 +106,18 @@ class TestCollatz (TestCase) :
         w = StringIO()
         collatz_solve(r, w)
         self.assertEqual(w.getvalue(), "1 10 20\n100 200 125\n201 210 89\n900 1000 174\n")
+
+    def test_solve2 (self) :
+        r = StringIO("1 1\n10 20\n")
+        w = StringIO()
+        collatz_solve(r, w)
+        self.assertEqual(w.getvalue(), "1 1 1\n10 10 7\n")
+
+    def test_solve3 (self) :
+        r = StringIO("1 1\n1 2\n1 1\n2 2\n")
+        w = StringIO()
+        collatz_solve(r, w)
+        self.assertEqual(w.getvalue(), "1 1 1\n1 2 2\n2 2 2\n")
 
 # ----
 # main
