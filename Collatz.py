@@ -37,19 +37,22 @@ def collatz_eval (i, j) :
 
     loopIncrement = 1
     j+=1
-    if(j > i):
+    if(i > j):
         loopIncrement *= -1
         j-=2
 
 
+    # print("Loop increment: " + str(loopIncrement))
     m = 1
-    for x in xrange(i,j,loopIncrement):
+    for x in range(i,j,loopIncrement):
         c = 1
-        while x > 1 :
-            if (x % 2) == 0 :
-                x = (x // 2)
+        # print("running range. c: " + str(c) + " x: " + str(x) + " m: " + str(m) + " loop increment: " + str(loopIncrement))
+        n = x
+        while n > 1 :
+            if (n % 2) == 0 :
+                n = (n // 2)
             else :
-                x = (3 * x) + 1
+                n = (3 * n) + 1
             c += 1
         assert c > 0
         m = max(c,m) 
