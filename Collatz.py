@@ -7,10 +7,14 @@
 # ---------------------------
 
 # ------------
+# global_varz
+# ------------
+cycleLengthCache = dict()
+
+
+# ------------
 # collatz_read
 # ------------
-
-import sys
 
 def collatz_read (s) :
     """
@@ -47,19 +51,28 @@ def collatz_eval (i, j) :
     # print("Loop increment: " + str(loopIncrement))
     m = 1
     for x in range(i,j,loopIncrement):
+        #print("Evaluating: " + str(x))
         c = 1
-        # print("running range. c: " + str(c) + " x: " + str(x) + " m: " + str(m) + " loop increment: " + str(loopIncrement))
-        n = x
-        while n > 1 :
-            if (n % 2) == 0 :
-                n = (n // 2)
-            else :
-                n = (3 * n) + 1
-            c += 1
-        assert c > 0
+        if(x in cycleLengthCache):
+            c = cycleLengthCache[x]
+            #print("Already had " + str(x) + " in cache")
+        else:
+            n = x
+            while n > 1 :
+                if(n in cycleLengthCache):
+                    #print("Already had " + str(n) + "->"+ str(cycleLengthCache[n]) + " in cache")
+                    c+=cycleLengthCache[n]-1
+                    break
+                else:
+                    if (n % 2) == 0 :
+                        n = (n // 2)
+                    else :
+                        n = (3 * n) + 1
+                    c += 1
+            assert c > 0
+        #print("assigning " + str(c) + " to " + str(x))
+        cycleLengthCache[x] = c
         m = max(c,m) 
-
-
 
     assert m > 0
     return m
