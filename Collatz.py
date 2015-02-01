@@ -10,6 +10,8 @@
 # collatz_read
 # ------------
 
+import sys
+
 def collatz_read (s) :
     """
     read two ints
