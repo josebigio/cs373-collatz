@@ -41,26 +41,27 @@ def collatz_eval (i, j) :
     assert i < 1000000
     assert j < 1000000
 
-    loopIncrement = 1
-    j+=1
-    if(i > j):
-        loopIncrement *= -1
-        j-=2
+    start = i
+    end = j
+    if(i>j):
+        start = j
+        end = i
 
 
-    # print("Loop increment: " + str(loopIncrement))
+    t = (end>>1)+1
+    if(t>start):
+        start = t
+    
+   
     m = 1
-    for x in range(i,j,loopIncrement):
-        #print("Evaluating: " + str(x))
+    for x in range(start,end+1):
         c = 1
         if(x in cycleLengthCache):
             c = cycleLengthCache[x]
-            #print("Already had " + str(x) + " in cache")
         else:
             n = x
             while n > 1 :
                 if(n in cycleLengthCache):
-                    #print("Already had " + str(n) + "->"+ str(cycleLengthCache[n]) + " in cache")
                     c+=cycleLengthCache[n]-1
                     break
                 else:
@@ -71,7 +72,6 @@ def collatz_eval (i, j) :
                         n = n + (n>>1) + 1
                         c += 2
             assert c > 0
-        #print("assigning " + str(c) + " to " + str(x))
         cycleLengthCache[x] = c
         m = max(c,m) 
 
