@@ -66,9 +66,10 @@ def collatz_eval (i, j) :
                 else:
                     if (n % 2) == 0 :
                         n = (n // 2)
+                        c +=1
                     else :
-                        n = (3 * n) + 1
-                    c += 1
+                        n = n + (n>>1) + 1
+                        c += 2
             assert c > 0
         #print("assigning " + str(c) + " to " + str(x))
         cycleLengthCache[x] = c
