@@ -9,8 +9,7 @@
 # ------------
 # global_varz
 # ------------
-cycleLengthCache = dict()
-
+cycleLengthCache = dict() #lazy cache
 
 # ------------
 # collatz_read
@@ -48,6 +47,7 @@ def collatz_eval (i, j) :
         end = i
 
 
+    #quiz 4 optimization
     t = (end>>1)+1
     if(t>start):
         start = t
@@ -69,6 +69,7 @@ def collatz_eval (i, j) :
                         n = (n // 2)
                         c +=1
                     else :
+                        #quiz 3 optimizaion
                         n = n + (n>>1) + 1
                         c += 2
             assert c > 0
