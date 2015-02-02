@@ -24,23 +24,23 @@ class TestCollatz (TestCase) :
     # # read
     # # ----
 
-    # def test_read (self) :
-    #     s    = "1 10\n"
-    #     i, j = collatz_read(s)
-    #     self.assertEqual(i,  1)
-    #     self.assertEqual(j, 10)
+    def test_read (self) :
+        s    = "1 10\n"
+        i, j = collatz_read(s)
+        self.assertEqual(i,  1)
+        self.assertEqual(j, 10)
 
-    # def test_read2 (self) :
-    #     s    = "1     10\n"
-    #     i, j = collatz_read(s)
-    #     self.assertEqual(i,  1)
-    #     self.assertEqual(j, 10)
+    def test_read2 (self) :
+        s    = "1     10\n"
+        i, j = collatz_read(s)
+        self.assertEqual(i,  1)
+        self.assertEqual(j, 10)
 
-    # def test_read3 (self) :
-    #     s    = "1 10 100\n"
-    #     i, j = collatz_read(s)
-    #     self.assertEqual(i,  1)
-    #     self.assertEqual(j, 10)
+    def test_read3 (self) :
+        s    = "1 10 100\n"
+        i, j = collatz_read(s)
+        self.assertEqual(i,  1)
+        self.assertEqual(j, 10)
 
     # # ----
     # # eval
