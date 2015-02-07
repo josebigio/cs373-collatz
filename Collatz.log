@@ -1,0 +1,107 @@
+commit b379918668c4ddb326fb69155fb2f28a1412e837
+Author: josebigio <sirownsalot@gmail.com>
+Date:   Sun Feb 1 22:58:06 2015 -0600
+
+    all files are ready to go
+
+commit 9832db8d3e8afa8fdcfb31bbf361a99405012b40
+Author: Jose Bigio <sirownsalot@gmail.com>
+Date:   Sun Feb 1 22:52:01 2015 -0600
+
+    fixed coverage3
+
+commit 8f68bbd7e181f078737934038df207ba053c123c
+Author: Jose Bigio <sirownsalot@gmail.com>
+Date:   Sun Feb 1 22:46:21 2015 -0600
+
+    ran coverage 3
+
+commit ba2d00aa0b759b4c219e088a6f6ac2ea5c0a151c
+Author: josebigio <sirownsalot@gmail.com>
+Date:   Sun Feb 1 22:40:44 2015 -0600
+
+    cleaned up the files
+
+commit 736a3765af7189b58e069271f12b0e7dd09eef54
+Author: josebigio <sirownsalot@gmail.com>
+Date:   Sun Feb 1 22:02:48 2015 -0600
+
+    Created Collatz.html and added dict.txt which has precomputed values. Lastly, added tester.py which measures time to see if optimizations are working
+
+commit d7a7b1ea4d134d0017e8cddae1faf284ed5e02ce
+Author: josebigio <sirownsalot@gmail.com>
+Date:   Sun Feb 1 01:51:45 2015 -0600
+
+    closed #16
+
+commit aed7bc2bdeea865ddb4ff66b07ce7bcc4f86f67c
+Author: josebigio <sirownsalot@gmail.com>
+Date:   Sun Feb 1 01:16:46 2015 -0600
+
+    addeed a time tester and incorporated quiz3 optimization
+
+commit d7ba560f7838f430e7c03229ab92b82366f97f32
+Author: josebigio <sirownsalot@gmail.com>
+Date:   Sat Jan 31 19:49:39 2015 -0600
+
+    passing all sphere tests
+
+commit 86a8d5b281cc066a8474b5803068a67c793dd072
+Author: josebigio <sirownsalot@gmail.com>
+Date:   Sat Jan 31 19:38:38 2015 -0600
+
+    Fixed  #15
+
+commit beb5028cc2a8737cf46431587e9f60ff4c0474fd
+Author: josebigio <sirownsalot@gmail.com>
+Date:   Sat Jan 31 18:58:12 2015 -0600
+
+    added  120 lines of tests
+
+commit c643b19bbe1d4078d2f65c317c9357b04b336b45
+Author: josebigio <sirownsalot@gmail.com>
+Date:   Thu Jan 29 23:29:39 2015 -0600
+
+    combined both Collatz and RunCollatz into SphereCollatz.py
+
+commit d112b2ccb1c6066e12ce1d475da58f35fc555fb0
+Author: josebigio <sirownsalot@gmail.com>
+Date:   Thu Jan 29 23:23:56 2015 -0600
+
+    fixed #13 and passing all tests now :D
+
+commit 4a720eea8df5f5cfeb5e654d56d5485a395e7c11
+Author: josebigio <sirownsalot@gmail.com>
+Date:   Thu Jan 29 23:21:39 2015 -0600
+
+    fixed #12
+
+commit 5c5c141d472e6e05be3a0151c551962b5e9a8dec
+Author: josebigio <sirownsalot@gmail.com>
+Date:   Thu Jan 29 23:15:15 2015 -0600
+
+    fix #11
+
+commit e5d80a30d9528d84dab1cfbb8d7cc85d19ac6e4e
+Author: josebigio <sirownsalot@gmail.com>
+Date:   Thu Jan 29 22:52:12 2015 -0600
+
+    finished implementing simple solution
+
+commit 72299e46a2c550dcc283a7fca51d41266baa5ae0
+Author: josebigio <sirownsalot@gmail.com>
+Date:   Thu Jan 29 22:18:00 2015 -0600
+
+    added 3 test cases for each function
+
+commit ae1c3c22752700d00a78e550ed060d5cbafcd40a
+Author: josebigio <sirownsalot@gmail.com>
+Date:   Thu Jan 29 20:54:51 2015 -0600
+
+    fixed the test cases
+
+commit 4675c281d293a27c18594a33176f332fa3094e85
+Author: josebigio <sirownsalot@gmail.com>
+Date:   Thu Jan 29 19:54:21 2015 -0600
+
+    confirmed the wrong results
